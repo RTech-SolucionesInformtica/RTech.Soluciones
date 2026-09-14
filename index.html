@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reparación y Armado de PC en San Miguel de Tucumán | RTech Soluciones Informática</title>
+<meta name="description" content="Servicio técnico de PC y notebooks en San Miguel de Tucumán. Diagnóstico sin cargo, backup de tus archivos antes de cualquier trabajo y repuestos originales. Holmberg 2859.">
+<meta property="og:title" content="RTech Soluciones Informática — Servicio Técnico de PC en San Miguel de Tucumán">
+<meta property="og:description" content="Reparación, armado a medida y upgrades de PC con diagnóstico 100% sin cargo. Holmberg 2859, San Miguel de Tucumán.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ComputerRepair",
+  "name": "RTech Soluciones Informática",
+  "image": "",
+  "telephone": "+543813399196",
+  "email": "rtech.solucionesinformatica@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Holmberg 2859",
+    "addressLocality": "San Miguel de Tucumán",
+    "addressRegion": "Tucumán",
+    "postalCode": "T4000",
+    "addressCountry": "AR"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "09:00",
+      "closes": "13:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "17:00",
+      "closes": "21:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Saturday"],
+      "opens": "09:00",
+      "closes": "13:00"
+    }
+  ],
+  "priceRange": "$$"
+}
+</script>
+<style>
+  :root{
+    --bg:#121212;
+    --bg-raised:#1a1a1a;
+    --bg-card:#181c1f;
+    --line:#262b2e;
+    --text:#ffffff;
+    --text-muted:#a8b0b3;
+    --cyan:#00d2ff;
+    --cyan-dim:#0a3a45;
+    --whatsapp:#25d366;
+    --whatsapp-dark:#1ea952;
+    --radius-card:10px;
+    --font-head:'Poppins', sans-serif;
+    --font-body:'Inter', sans-serif;
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0;}
+
+  html{scroll-behavior:smooth;}
+
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:var(--font-body);
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  img{max-width:100%;display:block;}
+
+  a{color:inherit;text-decoration:none;}
+
+  h1,h2,h3{
+    font-family:var(--font-head);
+    line-height:1.15;
+    font-weight:700;
+  }
+
+  .container{
+    width:100%;
+    max-width:1120px;
+    margin:0 auto;
+    padding:0 20px;
+  }
+
+  :focus-visible{
+    outline:2px solid var(--cyan);
+    outline-offset:3px;
+  }
+
+  /* ---------- Header ---------- */
+  header{
+    position:sticky;
+    top:0;
+    z-index:40;
+    background:rgba(18,18,18,0.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+
+  .nav-row{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:14px 0;
+  }
+
+  .brand{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-family:var(--font-head);
+    font-weight:700;
+    font-size:1.05rem;
+    letter-spacing:0.2px;
+  }
+
+  .brand-mark{
+    width:34px;height:34px;
+    border-radius:8px;
+    background:linear-gradient(145deg, var(--cyan-dim), #0e1416);
+    border:1px solid var(--cyan);
+    display:flex;align-items:center;justify-content:center;
+    color:var(--cyan);
+    font-family:var(--font-head);
+    font-weight:800;
+    font-size:0.9rem;
+  }
+
+  .brand small{
+    display:block;
+    font-family:var(--font-body);
+    font-weight:400;
+    font-size:0.68rem;
+    color:var(--text-muted);
+  }
+
+  nav.links{
+    display:none;
+    gap:28px;
+    font-size:0.94rem;
+    color:var(--text-muted);
+  }
+
+  nav.links a:hover{color:var(--cyan);}
+
+  .header-cta{
+    display:none;
+    background:var(--whatsapp);
+    color:#062b13;
+    font-weight:600;
+    font-size:0.88rem;
+    padding:9px 16px;
+    border-radius:7px;
+  }
+
+  .header-cta:hover{background:var(--whatsapp-dark);color:#fff;}
+
+  @media(min-width:840px){
+    nav.links{display:flex;}
+    .header-cta{display:inline-block;}
+  }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;
+    overflow:hidden;
+    padding:64px 0 56px;
+    border-bottom:1px solid var(--line);
+  }
+
+  .hero-bg{
+    position:absolute;
+    inset:0;
+    z-index:0;
+    opacity:0.5;
+    pointer-events:none;
+  }
+
+  .hero-inner{
+    position:relative;
+    z-index:1;
+    display:grid;
+    gap:36px;
+  }
+
+  @media(min-width:900px){
+    .hero-inner{grid-template-columns:1.1fr 0.9fr;align-items:center;}
+  }
+
+  .eyebrow-loc{
+    display:inline-flex;
+    align-items:center;
+    gap:7px;
+    color:var(--cyan);
+    font-size:0.85rem;
+    font-weight:500;
+    margin-bottom:18px;
+  }
+
+  .eyebrow-loc svg{width:15px;height:15px;flex:none;}
+
+  h1.hero-title{
+    font-size:clamp(1.9rem, 4.4vw, 2.85rem);
+    max-width:16ch;
+    margin-bottom:18px;
+  }
+
+  .hero-sub{
+    color:var(--text-muted);
+    font-size:1.05rem;
+    max-width:52ch;
+    margin-bottom:28px;
+  }
+
+  .cta-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px;
+    margin-bottom:34px;
+  }
+
+  .btn-whatsapp{
+    display:inline-flex;
+    align-items:center;
+    gap:9px;
+    background:var(--whatsapp);
+    color:#062b13;
+    font-weight:600;
+    font-size:0.98rem;
+    padding:14px 22px;
+    border-radius:9px;
+    border:none;
+    cursor:pointer;
+    transition:background 0.15s ease, transform 0.15s ease;
+  }
+
+  .btn-whatsapp:hover{background:var(--whatsapp-dark);color:#fff;transform:translateY(-1px);}
+
+  .btn-whatsapp svg{width:19px;height:19px;flex:none;}
+
+  .btn-ghost{
+    display:inline-flex;
+    align-items:center;
+    color:var(--cyan);
+    border:1px solid var(--cyan-dim);
+    font-weight:500;
+    font-size:0.95rem;
+    padding:13px 20px;
+    border-radius:9px;
+  }
+
+  .btn-ghost:hover{border-color:var(--cyan);}
+
+  .hero-strip{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;
+  }
+
+  @media(min-width:520px){.hero-strip{grid-template-columns:repeat(4,1fr);}}
+
+  .strip-item{
+    border:1px solid var(--line);
+    border-radius:8px;
+    padding:12px 10px;
+    font-size:0.78rem;
+    color:var(--text-muted);
+    text-align:center;
+  }
+
+  .strip-item strong{
+    display:block;
+    color:var(--text);
+    font-family:var(--font-head);
+    font-size:0.86rem;
+    margin-bottom:2px;
+  }
+
+  .hero-visual{
+    position:relative;
+    border-radius:14px;
+    border:1px solid var(--line);
+    background:
+      radial-gradient(circle at 30% 20%, rgba(0,210,255,0.12), transparent 55%),
+      linear-gradient(160deg, #171b1d, #0e1112);
+    aspect-ratio:4/3;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:24px;
+  }
+
+  .hero-visual .placeholder-note{
+    text-align:center;
+    color:var(--text-muted);
+    font-size:0.82rem;
+    max-width:26ch;
+  }
+
+  .hero-visual .placeholder-note svg{
+    width:46px;height:46px;
+    color:var(--cyan);
+    margin:0 auto 14px;
+  }
+
+  /* ---------- Section shell ---------- */
+  section{padding:60px 0;}
+  section.alt{background:var(--bg-raised);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+
+  .section-head{
+    max-width:60ch;
+    margin-bottom:38px;
+  }
+
+  .section-head h2{font-size:clamp(1.5rem,3vw,2rem);margin-bottom:12px;}
+  .section-head p{color:var(--text-muted);font-size:1rem;}
+
+  /* ---------- Servicios ---------- */
+  .services-grid{
+    display:grid;
+    gap:18px;
+    grid-template-columns:1fr;
+  }
+
+  @media(min-width:680px){.services-grid{grid-template-columns:1fr 1fr;}}
+
+  .service-card{
+    border:1px solid var(--line);
+    background:var(--bg-card);
+    border-radius:var(--radius-card);
+    padding:24px;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+  }
+
+  .service-card:nth-child(5){
+    grid-column:1/-1;
+  }
+
+  @media(min-width:680px){
+    .service-card:nth-child(5){max-width:calc(50% - 9px);}
+  }
+
+  .service-icon{
+    width:40px;height:40px;
+    border-radius:8px;
+    border:1px solid var(--cyan-dim);
+    display:flex;align-items:center;justify-content:center;
+    color:var(--cyan);
+  }
+
+  .service-icon svg{width:20px;height:20px;}
+
+  .service-card h3{font-size:1.08rem;}
+
+  .service-card p{color:var(--text-muted);font-size:0.92rem;}
+
+  .service-meta{
+    margin-top:auto;
+    padding-top:12px;
+    border-top:1px solid var(--line);
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+    font-size:0.82rem;
+  }
+
+  .service-meta span{color:var(--text-muted);}
+
+  .service-meta strong{color:var(--cyan);font-weight:600;}
+
+  /* ---------- Nosotros ---------- */
+  .about-grid{
+    display:grid;
+    gap:32px;
+  }
+
+  @media(min-width:880px){.about-grid{grid-template-columns:0.85fr 1.15fr;align-items:start;}}
+
+  .about-card{
+    border:1px solid var(--line);
+    border-radius:var(--radius-card);
+    padding:26px;
+    background:var(--bg-card);
+  }
+
+  .about-card .founder{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:16px;
+  }
+
+  .founder-avatar{
+    width:46px;height:46px;
+    border-radius:50%;
+    background:linear-gradient(150deg, var(--cyan-dim), #0e1416);
+    border:1px solid var(--cyan);
+    display:flex;align-items:center;justify-content:center;
+    font-family:var(--font-head);
+    color:var(--cyan);
+    font-weight:700;
+  }
+
+  .founder-name{font-weight:600;font-size:0.95rem;}
+  .founder-role{color:var(--text-muted);font-size:0.8rem;}
+
+  .about-card p{color:var(--text-muted);font-size:0.95rem;}
+
+  .pillars{
+    display:grid;
+    gap:14px;
+  }
+
+  .pillar{
+    display:flex;
+    gap:14px;
+    border:1px solid var(--line);
+    border-radius:var(--radius-card);
+    padding:18px 20px;
+    background:var(--bg-card);
+  }
+
+  .pillar-icon{
+    flex:none;
+    width:38px;height:38px;
+    border-radius:50%;
+    background:var(--cyan-dim);
+    color:var(--cyan);
+    display:flex;align-items:center;justify-content:center;
+  }
+
+  .pillar-icon svg{width:18px;height:18px;}
+
+  .pillar h3{font-size:0.98rem;margin-bottom:4px;}
+  .pillar p{color:var(--text-muted);font-size:0.88rem;}
+
+  /* ---------- Contacto ---------- */
+  .contact-grid{
+    display:grid;
+    gap:24px;
+  }
+
+  @media(min-width:920px){.contact-grid{grid-template-columns:1fr 1fr;align-items:start;}}
+
+  .contact-card{
+    border:1px solid var(--line);
+    border-radius:var(--radius-card);
+    background:var(--bg-card);
+    padding:26px;
+  }
+
+  .contact-card h3{font-size:1.05rem;margin-bottom:18px;}
+
+  form{display:flex;flex-direction:column;gap:14px;}
+
+  label{font-size:0.82rem;color:var(--text-muted);margin-bottom:6px;display:block;}
+
+  input,textarea{
+    width:100%;
+    background:#101314;
+    border:1px solid var(--line);
+    border-radius:7px;
+    padding:11px 13px;
+    color:var(--text);
+    font-family:var(--font-body);
+    font-size:0.92rem;
+  }
+
+  input:focus,textarea:focus{border-color:var(--cyan);outline:none;}
+
+  textarea{min-height:96px;resize:vertical;}
+
+  .form-submit{
+    margin-top:4px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:9px;
+    background:var(--whatsapp);
+    color:#062b13;
+    font-weight:600;
+    font-size:0.95rem;
+    padding:13px 18px;
+    border-radius:8px;
+    border:none;
+    cursor:pointer;
+  }
+
+  .form-submit:hover{background:var(--whatsapp-dark);color:#fff;}
+
+  .form-note{font-size:0.76rem;color:var(--text-muted);margin-top:2px;}
+
+  .info-stack{display:flex;flex-direction:column;gap:16px;}
+
+  .info-row{
+    display:flex;
+    gap:14px;
+    border:1px solid var(--line);
+    border-radius:var(--radius-card);
+    padding:18px 20px;
+    background:var(--bg-card);
+  }
+
+  .info-icon{
+    flex:none;
+    width:36px;height:36px;
+    border-radius:8px;
+    background:var(--cyan-dim);
+    color:var(--cyan);
+    display:flex;align-items:center;justify-content:center;
+  }
+
+  .info-icon svg{width:18px;height:18px;}
+
+  .info-row h4{font-size:0.92rem;margin-bottom:4px;}
+  .info-row p{color:var(--text-muted);font-size:0.86rem;}
+
+  .map-wrap{
+    border:1px solid var(--line);
+    border-radius:var(--radius-card);
+    overflow:hidden;
+    height:230px;
+  }
+
+  .map-wrap iframe{width:100%;height:100%;border:0;filter:grayscale(0.3) invert(0.9) contrast(0.85);}
+
+  /* ---------- Footer ---------- */
+  footer{
+    border-top:1px solid var(--line);
+    padding:36px 0 110px;
+  }
+
+  .footer-row{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+    align-items:flex-start;
+  }
+
+  @media(min-width:640px){
+    .footer-row{flex-direction:row;justify-content:space-between;align-items:center;}
+  }
+
+  .footer-brand{font-family:var(--font-head);font-weight:700;font-size:0.95rem;}
+
+  .footer-meta{color:var(--text-muted);font-size:0.82rem;}
+
+  .footer-meta a:hover{color:var(--cyan);}
+
+  /* ---------- Floating WhatsApp ---------- */
+  .float-wa{
+    position:fixed;
+    right:18px;
+    bottom:18px;
+    z-index:50;
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    background:var(--whatsapp);
+    color:#062b13;
+    font-weight:600;
+    font-size:0.86rem;
+    padding:13px 18px;
+    border-radius:50px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.45);
+  }
+
+  .float-wa svg{width:20px;height:20px;flex:none;}
+
+  .float-wa span.full{display:none;}
+
+  @media(min-width:560px){
+    .float-wa span.full{display:inline;}
+  }
+
+  @media(prefers-reduced-motion:no-preference){
+    .btn-whatsapp,.float-wa{transition:transform 0.15s ease, background 0.15s ease;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav-row">
+    <a href="#inicio" class="brand">
+      <span class="brand-mark">RT</span>
+      <span>
+        RTech Soluciones Informática
+        <small>San Miguel de Tucumán</small>
+      </span>
+    </a>
+    <nav class="links">
+      <a href="#inicio">Inicio</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <a class="header-cta" href="https://wa.me/543813399196?text=Hola!%20Estuve%20viendo%20tu%20p%C3%A1gina%20web%20y%20quiero%20coordinar%20para%20llevar%20mi%20PC%20a%20revisi%C3%B3n%20a%20Holmberg%202859.%20Mi%20equipo%20presenta%20la%20siguiente%20falla%3A" target="_blank" rel="noopener">Escribinos</a>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============ INICIO ============ -->
+  <section class="hero" id="inicio">
+    <svg class="hero-bg" viewBox="0 0 1200 500" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <g stroke="#00d2ff" stroke-width="1" fill="none" opacity="0.18">
+        <path d="M0 80 H260 L300 120 H520"/>
+        <path d="M0 220 H160 L200 260 H460 L500 220 H900"/>
+        <path d="M1200 60 H940 L900 100 H700"/>
+        <path d="M1200 380 H1000 L960 340 H720 L680 380 H420"/>
+        <circle cx="520" cy="120" r="4" fill="#00d2ff"/>
+        <circle cx="500" cy="220" r="4" fill="#00d2ff"/>
+        <circle cx="700" cy="100" r="4" fill="#00d2ff"/>
+        <circle cx="680" cy="380" r="4" fill="#00d2ff"/>
+      </g>
+    </svg>
+    <div class="container hero-inner">
+      <div>
+        <span class="eyebrow-loc">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          Holmberg 2859, San Miguel de Tucumán
+        </span>
+        <h1 class="hero-title">Servicio Técnico de PC, Notebooks y Armado de Equipos en San Miguel de Tucumán</h1>
+        <p class="hero-sub">Soluciones rápidas, transparentes y con repuestos originales. Traé tu computadora a nuestro taller de Holmberg 2859 y te damos un presupuesto 100% sin cargo.</p>
+        <div class="cta-row">
+          <a class="btn-whatsapp" href="https://wa.me/543813399196?text=Hola!%20Estuve%20viendo%20tu%20p%C3%A1gina%20web%20y%20quiero%20coordinar%20para%20llevar%20mi%20PC%20a%20revisi%C3%B3n%20a%20Holmberg%202859.%20Mi%20equipo%20presenta%20la%20siguiente%20falla%3A" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.4.1-.2 0-.4 0-.5-.1-.1-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.7.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z"/><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.5-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+            Tocá acá y coordiná tu diagnóstico sin cargo
+          </a>
+          <a class="btn-ghost" href="#servicios">Ver servicios</a>
+        </div>
+        <div class="hero-strip">
+          <div class="strip-item"><strong>Mantenimiento</strong>Limpieza y pasta térmica</div>
+          <div class="strip-item"><strong>Armado a medida</strong>Gaming, oficina, diseño</div>
+          <div class="strip-item"><strong>SSD y NVMe</strong>Upgrades express</div>
+          <div class="strip-item"><strong>Software</strong>Licencias originales</div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="placeholder-note">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M8 20h8M12 16v4"/></svg>
+          Espacio para foto real del taller: gabinete o mano técnica aplicando pasta térmica en Holmberg 2859.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICIOS ============ -->
+  <section id="servicios">
+    <div class="container">
+      <div class="section-head">
+        <h2>Servicios</h2>
+        <p>Cada trabajo sale de nuestro taller con diagnóstico previo, backup de tus archivos y repuestos originales.</p>
+      </div>
+      <div class="services-grid">
+
+        <article class="service-card">
+          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 4h18v12H3z"/><path d="M8 20h8M12 16v4"/><path d="M7 8h4M7 11h6"/></svg></div>
+          <h3>Reparación y Mantenimiento Completo</h3>
+          <p>Limpieza física profunda, cambio de pasta térmica, eliminación de virus, instalación de sistema operativo y optimización de software.</p>
+          <div class="service-meta">
+            <span>Para quién: <strong>equipos lentos, recalentados o que no arrancan</strong></span>
+            <span>Incluye: limpieza interna, pasta térmica de calidad, formateo optimizado</span>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 6h16v10H4z"/><path d="M9 20h6"/><path d="M8 10h2M8 13h5"/></svg></div>
+          <h3>Armado de PC a la Medida</h3>
+          <p>Te asesoramos y armamos tu computadora ideal según tu presupuesto, optimizada para gaming, diseño/edición u oficina y estudio.</p>
+          <div class="service-meta">
+            <span>Para quién: <strong>gamers, editores, diseñadores, oficinas y estudiantes</strong></span>
+            <span>Incluye: asesoramiento, armado con cable management y stress test</span>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v6M12 21v-6M5 12h6M13 12h6"/><rect x="9" y="9" width="6" height="6" rx="1"/></svg></div>
+          <h3>Actualizaciones y Upgrades</h3>
+          <p>Multiplicamos la velocidad de tu computadora o notebook con discos de estado sólido SSD SATA y NVMe M.2, y ampliación de memoria RAM.</p>
+          <div class="service-meta">
+            <span>Para quién: <strong>equipos viejos que necesitan rendir sin comprar una PC nueva</strong></span>
+            <span>Incluye: SSD/NVMe de última generación, ampliación de RAM</span>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg></div>
+          <h3>Backup y Recuperación de Datos</h3>
+          <p>Resguardamos toda tu información antes de cualquier formateo. Si tu sistema no arranca o borraste archivos, recuperamos tus fotos, documentos y trabajos.</p>
+          <div class="service-meta">
+            <span>Para quién: <strong>estudiantes con tesis, estudios contables, abogados y familias</strong></span>
+            <span>Incluye: backup previo, recuperación de datos, desbloqueo de pendrives/SD</span>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l8 3v6c0 5-3.4 8.4-8 11-4.6-2.6-8-6-8-11V5z"/></svg></div>
+          <h3>Software Original y Seguridad</h3>
+          <p>Instalación y activación de licencias originales para Windows, Microsoft Office y Antivirus, para trabajar seguro y sin bloqueos.</p>
+          <div class="service-meta">
+            <span>Para quién: <strong>profesionales y empresas locales con datos sensibles</strong></span>
+            <span>Incluye: licencias originales de Windows, Office y Antivirus</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ NOSOTROS ============ -->
+  <section class="alt" id="nosotros">
+    <div class="container about-grid">
+      <div class="about-card">
+        <div class="founder">
+          <span class="founder-avatar">JP</span>
+          <div>
+            <div class="founder-name">Juan Pablo</div>
+            <div class="founder-role">Fundador, RTech Soluciones Informática</div>
+          </div>
+        </div>
+        <p>"Empecé a armar y reparar computadoras como un hobby que rápidamente se transformó en mi profesión. Sé lo frustrante que es que una PC falle cuando tenés que trabajar, estudiar o querés jugar. Por eso fundé este espacio en San Miguel de Tucumán con una misión clara: ofrecer un servicio técnico honesto, rápido y sin vueltas, cuidando la computadora de cada tucumano como si fuera la mía."</p>
+      </div>
+      <div>
+        <div class="section-head" style="margin-bottom:22px;">
+          <h2>Nuestro equipo</h2>
+          <p>Somos técnicos apasionados por el hardware. No nos vemos como simples reparadores, sino como los aliados tecnológicos que necesitás para que tu herramienta de trabajo, estudio o juego nunca te deje a gamba.</p>
+        </div>
+        <div class="pillars">
+          <div class="pillar">
+            <span class="pillar-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 8v5l3 2"/><circle cx="12" cy="12" r="9"/></svg></span>
+            <div><h3>Diagnóstico sin cargo</h3><p>Sabés exactamente qué tiene tu equipo y cuánto vas a gastar antes de poner un peso.</p></div>
+          </div>
+          <div class="pillar">
+            <span class="pillar-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l8 3v6c0 5-3.4 8.4-8 11-4.6-2.6-8-6-8-11V6z"/></svg></span>
+            <div><h3>Resguardo total de datos</h3><p>Nunca formateamos ni tocamos un equipo sin antes hacer un backup de tu información.</p></div>
+          </div>
+          <div class="pillar">
+            <span class="pillar-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></span>
+            <div><h3>Cero tecnicismos raros</h3><p>Explicamos las fallas de forma simple y mostramos fotos del componente dañado.</p></div>
+          </div>
+          <div class="pillar">
+            <span class="pillar-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2L4 14h6l-1 8 9-12h-6z"/></svg></span>
+            <div><h3>Velocidad y componentes originales</h3><p>Mantenimientos básicos entregados en 24/48 horas hábiles, con repuestos y licencias originales.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACTO ============ -->
+  <section id="contacto">
+    <div class="container">
+      <div class="section-head">
+        <h2>Contacto</h2>
+        <p>Contanos qué le pasa a tu PC y coordinamos tu diagnóstico sin cargo en Holmberg 2859.</p>
+      </div>
+      <div class="contact-grid">
+
+        <div class="contact-card">
+          <h3>Contanos tu caso</h3>
+          <form id="contact-form">
+            <div>
+              <label for="nombre">Nombre completo</label>
+              <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div>
+              <label for="whatsapp">Número de WhatsApp</label>
+              <input type="tel" id="whatsapp" name="whatsapp" required>
+            </div>
+            <div>
+              <label for="falla">¿Qué le pasa a tu PC?</label>
+              <textarea id="falla" name="falla" placeholder="Breve descripción de la falla" required></textarea>
+            </div>
+            <button type="submit" class="form-submit">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.4.1-.2 0-.4 0-.5-.1-.1-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.7.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z"/><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.5-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+              Enviar por WhatsApp
+            </button>
+            <p class="form-note">Al enviar, se abre WhatsApp con tu mensaje ya redactado para confirmar el envío.</p>
+          </form>
+        </div>
+
+        <div class="info-stack">
+          <div class="info-row">
+            <span class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+            <div><h4>Ubicación</h4><p>Holmberg 2859, San Miguel de Tucumán, Tucumán (C.P. T4000)</p></div>
+          </div>
+          <div class="info-row">
+            <span class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></span>
+            <div>
+              <h4>Horario de atención</h4>
+              <p>Lunes a viernes: 09:00–13:00 y 17:00–21:00<br>Sábados: 09:00–13:00 (equipos bajo agenda)</p>
+            </div>
+          </div>
+          <div class="info-row">
+            <span class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5h16v14H4z"/><path d="M4 6l8 7 8-7"/></svg></span>
+            <div><h4>Email</h4><p>rtech.solucionesinformatica@gmail.com</p></div>
+          </div>
+          <div class="map-wrap">
+            <iframe title="Ubicación de RTech Soluciones Informática" loading="lazy" src="https://www.google.com/maps?q=Holmberg%202859,%20San%20Miguel%20de%20Tucum%C3%A1n,%20Tucum%C3%A1n&output=embed"></iframe>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container footer-row">
+    <span class="footer-brand">RTech Soluciones Informática</span>
+    <span class="footer-meta">Holmberg 2859, San Miguel de Tucumán · <a href="mailto:rtech.solucionesinformatica@gmail.com">rtech.solucionesinformatica@gmail.com</a></span>
+  </div>
+  <div class="container">
+    <p class="footer-meta" style="margin-top:14px;">© <span id="year"></span> RTech Soluciones Informática. Todos los derechos reservados. · Desarrollado por Juan Pablo Rodríguez</p>
+  </div>
+</footer>
+
+<a class="float-wa" href="https://wa.me/543813399196?text=Hola!%20Estuve%20viendo%20tu%20p%C3%A1gina%20web%20y%20quiero%20coordinar%20para%20llevar%20mi%20PC%20a%20revisi%C3%B3n%20a%20Holmberg%202859.%20Mi%20equipo%20presenta%20la%20siguiente%20falla%3A" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.4.1-.2 0-.4 0-.5-.1-.1-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.7.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z"/><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.5-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+  <span class="full">Tocá acá y mandanos un WhatsApp</span>
+</a>
+
+<script>
+  document.getElementById('contact-form').addEventListener('submit', function(e){
+    e.preventDefault();
+    var nombre = document.getElementById('nombre').value.trim();
+    var telefono = document.getElementById('whatsapp').value.trim();
+    var falla = document.getElementById('falla').value.trim();
+    var texto = 'Hola! Soy ' + nombre + ' (WhatsApp: ' + telefono + '). Quiero coordinar para llevar mi PC a revisión a Holmberg 2859. Mi equipo presenta la siguiente falla: ' + falla;
+    var url = 'https://wa.me/543813399196?text=' + encodeURIComponent(texto);
+    window.open(url, '_blank');
+  });
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

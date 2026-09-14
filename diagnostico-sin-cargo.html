@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diagnóstico Sin Cargo para tu PC | RTech Soluciones Informática — San Miguel de Tucumán</title>
+<meta name="description" content="¿Tu PC se arrastra o querés armar la máquina de tus sueños? Diagnóstico 100% sin cargo, backup de tus archivos y repuestos originales. Holmberg 2859, San Miguel de Tucumán.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#121212;
+    --bg-raised:#1a1a1a;
+    --bg-card:#181c1f;
+    --line:#262b2e;
+    --text:#ffffff;
+    --text-muted:#a8b0b3;
+    --cyan:#00d2ff;
+    --cyan-dim:#0a3a45;
+    --whatsapp:#25d366;
+    --whatsapp-dark:#1ea952;
+    --radius-card:10px;
+    --font-head:'Poppins', sans-serif;
+    --font-body:'Inter', sans-serif;
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--bg);color:var(--text);font-family:var(--font-body);line-height:1.55;-webkit-font-smoothing:antialiased;}
+  img{max-width:100%;display:block;}
+  a{color:inherit;text-decoration:none;}
+  h1,h2,h3{font-family:var(--font-head);line-height:1.15;font-weight:700;}
+  .container{width:100%;max-width:1080px;margin:0 auto;padding:0 20px;}
+  :focus-visible{outline:2px solid var(--cyan);outline-offset:3px;}
+  section{padding:56px 0;}
+  section.alt{background:var(--bg-raised);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .section-head{max-width:60ch;margin:0 auto 36px;text-align:center;}
+  .section-head h2{font-size:clamp(1.4rem,3vw,1.9rem);margin-bottom:10px;}
+  .section-head p{color:var(--text-muted);}
+
+  .btn-whatsapp{
+    display:inline-flex;align-items:center;gap:9px;
+    background:var(--whatsapp);color:#062b13;font-weight:600;font-size:0.98rem;
+    padding:14px 22px;border-radius:9px;border:none;cursor:pointer;
+    transition:background 0.15s ease, transform 0.15s ease;
+  }
+  .btn-whatsapp:hover{background:var(--whatsapp-dark);color:#fff;transform:translateY(-1px);}
+  .btn-whatsapp svg{width:19px;height:19px;flex:none;}
+  .btn-whatsapp.block{width:100%;justify-content:center;}
+
+  /* Hero */
+  .hero{position:relative;overflow:hidden;padding:56px 0 44px;border-bottom:1px solid var(--line);text-align:center;}
+  .hero-bg{position:absolute;inset:0;z-index:0;opacity:0.45;pointer-events:none;}
+  .hero-inner{position:relative;z-index:1;max-width:680px;margin:0 auto;}
+  .brand-tag{display:inline-flex;align-items:center;gap:8px;color:var(--cyan);font-size:0.82rem;font-weight:500;margin-bottom:20px;}
+  .brand-tag .dot{width:6px;height:6px;border-radius:50%;background:var(--cyan);}
+  h1.hero-title{font-size:clamp(1.7rem,4.2vw,2.5rem);margin-bottom:16px;}
+  .hero-sub{color:var(--text-muted);font-size:1.02rem;max-width:52ch;margin:0 auto 20px;}
+
+  .benefit-list{
+    display:grid;gap:12px;max-width:520px;margin:0 auto 30px;text-align:left;
+  }
+  .benefit-item{
+    display:flex;gap:12px;align-items:flex-start;
+    border:1px solid var(--line);border-radius:9px;padding:14px 16px;background:var(--bg-card);
+  }
+  .benefit-item .ico{flex:none;font-size:1.15rem;line-height:1;}
+  .benefit-item strong{display:block;font-size:0.92rem;margin-bottom:2px;}
+  .benefit-item span{color:var(--text-muted);font-size:0.85rem;}
+
+  .hero-visual{
+    margin:0 auto 8px;
+    max-width:560px;
+    border-radius:14px;border:1px solid var(--line);
+    background:radial-gradient(circle at 30% 20%, rgba(0,210,255,0.12), transparent 55%), linear-gradient(160deg, #171b1d, #0e1112);
+    aspect-ratio:16/8;display:flex;align-items:center;justify-content:center;padding:24px;
+  }
+  .hero-visual .placeholder-note{text-align:center;color:var(--text-muted);font-size:0.8rem;max-width:30ch;}
+  .hero-visual svg.icon{width:40px;height:40px;color:var(--cyan);margin:0 auto 10px;}
+
+  /* Social proof */
+  .proof-bar{
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    padding:20px 0;
+  }
+  .proof-row{
+    display:flex;flex-wrap:wrap;justify-content:center;gap:28px;
+    color:var(--text-muted);font-size:0.86rem;text-align:center;
+  }
+  .proof-row strong{color:var(--cyan);font-family:var(--font-head);display:block;font-size:1.05rem;}
+
+  /* Beneficios 3 columnas */
+  .cols-3{display:grid;gap:18px;grid-template-columns:1fr;}
+  @media(min-width:760px){.cols-3{grid-template-columns:repeat(3,1fr);}}
+  .col-card{border:1px solid var(--line);border-radius:var(--radius-card);padding:24px;background:var(--bg-card);}
+  .col-card h3{font-size:1.02rem;margin-bottom:10px;}
+  .col-card p{color:var(--text-muted);font-size:0.9rem;}
+
+  /* Caracteristicas */
+  .feature-grid{display:grid;gap:16px;grid-template-columns:1fr;}
+  @media(min-width:700px){.feature-grid{grid-template-columns:repeat(3,1fr);}}
+  .feature-card{border:1px solid var(--line);border-radius:var(--radius-card);padding:22px;background:var(--bg-card);}
+  .feature-card .ico{width:36px;height:36px;border-radius:8px;border:1px solid var(--cyan-dim);color:var(--cyan);display:flex;align-items:center;justify-content:center;margin-bottom:12px;}
+  .feature-card .ico svg{width:18px;height:18px;}
+  .feature-card h3{font-size:0.98rem;margin-bottom:8px;}
+  .feature-card p{color:var(--text-muted);font-size:0.87rem;}
+
+  /* Proceso */
+  .steps{display:grid;gap:18px;grid-template-columns:1fr;counter-reset:step;}
+  @media(min-width:760px){.steps{grid-template-columns:repeat(3,1fr);}}
+  .step{
+    position:relative;border:1px solid var(--line);border-radius:var(--radius-card);padding:26px 22px 22px;background:var(--bg-card);
+  }
+  .step-num{
+    display:inline-flex;align-items:center;justify-content:center;
+    width:30px;height:30px;border-radius:50%;background:var(--cyan-dim);color:var(--cyan);
+    font-family:var(--font-head);font-weight:700;font-size:0.9rem;margin-bottom:14px;
+  }
+  .step h3{font-size:0.98rem;margin-bottom:8px;}
+  .step p{color:var(--text-muted);font-size:0.87rem;}
+
+  /* Testimonios */
+  .testimonial-grid{display:grid;gap:18px;grid-template-columns:1fr;}
+  @media(min-width:700px){.testimonial-grid{grid-template-columns:1fr 1fr;}}
+  .testimonial{border:1px solid var(--line);border-radius:var(--radius-card);padding:24px;background:var(--bg-card);}
+  .testimonial p.quote{color:var(--text);font-size:0.95rem;margin-bottom:16px;}
+  .testimonial .author{display:flex;align-items:center;gap:10px;}
+  .avatar-sm{width:36px;height:36px;border-radius:50%;background:linear-gradient(150deg,var(--cyan-dim),#0e1416);border:1px solid var(--cyan);display:flex;align-items:center;justify-content:center;color:var(--cyan);font-family:var(--font-head);font-weight:700;font-size:0.82rem;flex:none;}
+  .author-name{font-size:0.86rem;font-weight:600;}
+  .author-role{font-size:0.78rem;color:var(--text-muted);}
+
+  /* Oferta */
+  .price-card{
+    max-width:560px;margin:0 auto;border:1px solid var(--cyan-dim);border-radius:14px;
+    background:var(--bg-card);padding:32px;text-align:center;
+  }
+  .price-card .tag{color:var(--cyan);font-size:0.85rem;font-weight:500;margin-bottom:10px;}
+  .price-card .amount{font-family:var(--font-head);font-size:2.1rem;font-weight:800;margin-bottom:6px;}
+  .price-card .amount small{font-family:var(--font-body);font-size:0.85rem;color:var(--text-muted);font-weight:400;}
+  .price-card p.desc{color:var(--text-muted);font-size:0.9rem;margin-bottom:22px;}
+
+  /* Garantia */
+  .guarantee-box{
+    max-width:640px;margin:0 auto;display:flex;gap:16px;align-items:flex-start;
+    border:1px solid var(--line);border-radius:var(--radius-card);padding:24px;background:var(--bg-card);
+  }
+  .guarantee-box .ico{flex:none;width:42px;height:42px;border-radius:50%;background:var(--cyan-dim);color:var(--cyan);display:flex;align-items:center;justify-content:center;}
+  .guarantee-box .ico svg{width:22px;height:22px;}
+  .guarantee-box p{color:var(--text-muted);font-size:0.92rem;}
+
+  /* FAQ */
+  .faq-list{max-width:720px;margin:0 auto;display:flex;flex-direction:column;gap:10px;}
+  .faq-item{border:1px solid var(--line);border-radius:9px;background:var(--bg-card);overflow:hidden;}
+  .faq-item summary{
+    cursor:pointer;list-style:none;padding:16px 20px;font-weight:600;font-size:0.94rem;
+    display:flex;justify-content:space-between;align-items:center;gap:12px;
+  }
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-item summary .chev{color:var(--cyan);flex:none;transition:transform 0.15s ease;}
+  .faq-item[open] summary .chev{transform:rotate(45deg);}
+  .faq-item .a{padding:0 20px 18px;color:var(--text-muted);font-size:0.9rem;}
+
+  /* Cierre */
+  .closing{
+    text-align:center;
+    border-top:1px solid var(--line);
+  }
+  .closing h2{font-size:clamp(1.4rem,3.4vw,2rem);max-width:22ch;margin:0 auto 14px;}
+  .closing p{color:var(--text-muted);max-width:50ch;margin:0 auto 26px;}
+
+  footer{border-top:1px solid var(--line);padding:30px 0 110px;text-align:center;}
+  .footer-meta{color:var(--text-muted);font-size:0.82rem;}
+  .footer-meta a:hover{color:var(--cyan);}
+
+  .float-wa{
+    position:fixed;right:18px;bottom:18px;z-index:50;
+    display:inline-flex;align-items:center;gap:10px;background:var(--whatsapp);color:#062b13;
+    font-weight:600;font-size:0.86rem;padding:13px 18px;border-radius:50px;box-shadow:0 10px 30px rgba(0,0,0,0.45);
+  }
+  .float-wa svg{width:20px;height:20px;flex:none;}
+  .float-wa span.full{display:none;}
+  @media(min-width:560px){.float-wa span.full{display:inline;}}
+</style>
+</head>
+<body>
+
+<!-- ============ 1. ENCABEZADO ============ -->
+<section class="hero">
+  <svg class="hero-bg" viewBox="0 0 1200 400" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+    <g stroke="#00d2ff" stroke-width="1" fill="none" opacity="0.16">
+      <path d="M0 60 H260 L300 100 H560"/>
+      <path d="M1200 320 H940 L900 280 H620 L580 320 H300"/>
+      <circle cx="560" cy="100" r="4" fill="#00d2ff"/>
+      <circle cx="580" cy="320" r="4" fill="#00d2ff"/>
+    </g>
+  </svg>
+  <div class="container hero-inner">
+    <span class="brand-tag"><span class="dot"></span>RTech Soluciones Informática — San Miguel de Tucumán</span>
+    <h1 class="hero-title">¿Tu computadora se arrastra o querés armar la máquina de tus sueños?</h1>
+    <p class="hero-sub">Servicio técnico especializado en San Miguel de Tucumán. Diagnosticamos y potenciamos tu equipo con repuestos originales y total transparencia.</p>
+
+    <div class="hero-visual">
+      <div class="placeholder-note">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M8 20h8M12 16v4"/></svg>
+        Espacio para foto real: gabinete gamer con luces RGB o manos técnicas aplicando pasta térmica en la mesa de trabajo.
+      </div>
+    </div>
+
+    <div class="benefit-list">
+      <div class="benefit-item">
+        <span class="ico">⏱️</span>
+        <div><strong>Rapidez local</strong><span>Mantenimientos preventivos y optimizaciones listos en 24/48 horas hábiles.</span></div>
+      </div>
+      <div class="benefit-item">
+        <span class="ico">🔬</span>
+        <div><strong>Presupuesto sin cargo</strong><span>Traés tu PC al taller y sabés la falla exacta antes de gastar un solo peso.</span></div>
+      </div>
+      <div class="benefit-item">
+        <span class="ico">🔒</span>
+        <div><strong>Datos 100% a salvo</strong><span>Resguardamos tus fotos, documentos y archivos con un backup previo a cualquier trabajo.</span></div>
+      </div>
+    </div>
+
+    <a class="btn-whatsapp" href="https://wa.me/543813399196?text=Hola!%20Estuve%20viendo%20tu%20p%C3%A1gina%20web%20y%20quiero%20coordinar%20para%20llevar%20mi%20PC%20a%20revisi%C3%B3n%20a%20Holmberg%202859.%20Mi%20equipo%20presenta%20la%20siguiente%20falla%3A" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.4.1-.2 0-.4 0-.5-.1-.1-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.7.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z"/><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.5-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+      Coordiná tu diagnóstico sin cargo por WhatsApp
+    </a>
+  </div>
+</section>
+
+<!-- ============ 2. CONFIANZA / PRUEBA SOCIAL ============ -->
+<div class="proof-bar">
+  <div class="container proof-row">
+    <div><strong>+500</strong>computadoras revividas en San Miguel de Tucumán</div>
+    <div><strong>Años</strong>de experiencia real en hardware y optimización</div>
+    <div><strong>100%</strong>diagnósticos honestos y sin vueltas</div>
+  </div>
+</div>
+
+<!-- ============ 3. BENEFICIOS ============ -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <h2>Lo que ganás al traer tu equipo</h2>
+    </div>
+    <div class="cols-3">
+      <div class="col-card">
+        <h3>Productividad sin frenos</h3>
+        <p>Olvidate de los cuelgues a mitad de una entrega o de esperar minutos para que encienda. Tu PC va a responder al instante para que trabajes o estudies sin renegar.</p>
+      </div>
+      <div class="col-card">
+        <h3>Máximo rendimiento gaming</h3>
+        <p>Exprimimos cada componente de tu hardware. Jugá a los últimos lanzamientos de forma fluida, con temperaturas estables y sin tirones de pantalla.</p>
+      </div>
+      <div class="col-card">
+        <h3>Cero dolores de cabeza</h3>
+        <p>Sin virus, sin carteles molestos de "Windows no es original" y con la tranquilidad de que tus archivos importantes están completamente respaldados.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4. CARACTERÍSTICAS ============ -->
+<section class="alt">
+  <div class="container">
+    <div class="section-head">
+      <h2>Lo que incluye el servicio</h2>
+    </div>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 4h18v12H3z"/><path d="M8 20h8M12 16v4"/></svg></span>
+        <h3>Mantenimiento y reparación</h3>
+        <p>Limpieza física interna profunda, cambio de pasta térmica de alta calidad, eliminación de malware e instalación optimizada de sistemas operativos.</p>
+      </div>
+      <div class="feature-card">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v6M12 21v-6M5 12h6M13 12h6"/></svg></span>
+        <h3>Upgrades de alta velocidad</h3>
+        <p>Colocación de discos de estado sólido (SSD SATA y NVMe M.2) de última generación y ampliación de memoria RAM.</p>
+      </div>
+      <div class="feature-card">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l8 3v6c0 5-3.4 8.4-8 11-4.6-2.6-8-6-8-11V5z"/></svg></span>
+        <h3>Software y resguardo legal</h3>
+        <p>Licencias originales y definitivas de Windows, Office y Antivirus, junto con recuperación de datos y desbloqueo de pendrives contra escritura.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5. CÓMO FUNCIONA ============ -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <h2>Cómo funciona</h2>
+      <p>El proceso en 3 pasos simples.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <span class="step-num">1</span>
+        <h3>Agendás por WhatsApp</h3>
+        <p>Tocás el botón, nos contás qué le pasa a tu equipo y coordinamos un horario para que lo traigas a nuestro taller en Holmberg 2859.</p>
+      </div>
+      <div class="step">
+        <span class="step-num">2</span>
+        <h3>Diagnóstico a tasa cero</h3>
+        <p>Revisamos tu PC a fondo y te enviamos un presupuesto detallado. Si decidís no avanzar con la reparación, retirás tu equipo sin pagar nada.</p>
+      </div>
+      <div class="step">
+        <span class="step-num">3</span>
+        <h3>Retirás tu PC volando</h3>
+        <p>Hacemos el trabajo técnico, testeamos la estabilidad del sistema y te avisamos para que pases a buscar tu máquina optimizada, con garantía escrita.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6. TESTIMONIOS ============ -->
+<section class="alt">
+  <div class="container">
+    <div class="section-head">
+      <h2>Lo que dicen nuestros clientes</h2>
+      <p>Testimonios de ejemplo — reemplazar por reseñas reales de clientes.</p>
+    </div>
+    <div class="testimonial-grid">
+      <div class="testimonial">
+        <p class="quote">"Traje mi notebook de arquitectura que tardaba una eternidad en abrir los programas. Le instalaron un NVMe y le hicieron limpieza profunda; ahora vuela. Excelente la atención en Holmberg."</p>
+        <div class="author">
+          <span class="avatar-sm">MG</span>
+          <div><div class="author-name">Martín G.</div><div class="author-role">Estudiante UNT</div></div>
+        </div>
+      </div>
+      <div class="testimonial">
+        <p class="quote">"Súper honesto. En otros lados me querían cobrar una fortuna por un problema de arranque y acá me diagnosticaron la falla real de la fuente al toque. Presupuesto sin cargo real."</p>
+        <div class="author">
+          <span class="avatar-sm">LS</span>
+          <div><div class="author-name">Laura S.</div><div class="author-role">Trabajadora remota</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 7. OFERTA / PRECIOS ============ -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <h2>Mantenimientos, limpiezas y optimizaciones express</h2>
+    </div>
+    <div class="price-card">
+      <span class="tag">Presupuesto inicial</span>
+      <div class="amount">Sin cargo<small> · mano de obra a coordinar según el estado del equipo</small></div>
+      <p class="desc">Traés tu PC a Holmberg 2859, la revisamos y te decimos la falla exacta y el costo antes de que gastes un peso.</p>
+      <a class="btn-whatsapp block" href="https://wa.me/543813399196?text=Hola!%20Quiero%20consultar%20una%20cotizaci%C3%B3n%20para%20mi%20PC." target="_blank" rel="noopener">Consultar cotización para mi PC</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 8. GARANTÍA ============ -->
+<section class="alt">
+  <div class="container">
+    <div class="guarantee-box">
+      <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l8 3v6c0 5-3.4 8.4-8 11-4.6-2.6-8-6-8-11V6z"/><path d="M9 12l2 2 4-4"/></svg></span>
+      <p><strong style="color:var(--text);">Garantía escrita de confianza.</strong> Todos nuestros trabajos técnicos cuentan con respaldo sobre la mano de obra realizada. Si el problema persiste por la misma falla dentro del plazo, lo solucionamos sin cargos extra.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 9. PREGUNTAS FRECUENTES ============ -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <h2>Preguntas frecuentes</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>¿Tengo que pagar algo si al final decido no arreglar la PC?<span class="chev">+</span></summary>
+        <div class="a">No, para nada. El diagnóstico en Holmberg 2859 es completamente gratis. Te damos el presupuesto y vos elegís si lo hacés o no.</div>
+      </details>
+      <details class="faq-item">
+        <summary>¿Qué pasa con mis fotos y archivos de trabajo, se pierden al formatear?<span class="chev">+</span></summary>
+        <div class="a">Tus datos están seguros. Hacemos un resguardo completo (backup) de toda tu información antes de tocar cualquier software o sistema operativo.</div>
+      </details>
+      <details class="faq-item">
+        <summary>¿Tengo que comprar yo los discos SSD o repuestos?<span class="chev">+</span></summary>
+        <div class="a">Como te sea más cómodo. Podemos cotizarte los componentes nosotros con proveedores de confianza, o podés traerlos vos y solo te cobramos la mano de obra del armado o actualización.</div>
+      </details>
+      <details class="faq-item">
+        <summary>¿Cuánto tiempo demoran en reparar mi PC?<span class="chev">+</span></summary>
+        <div class="a">Los mantenimientos preventivos y optimizaciones básicas se entregan en 24 a 48 horas hábiles. Si la falla requiere cambiar un repuesto complejo, te avisamos el tiempo estimado en el presupuesto.</div>
+      </details>
+      <details class="faq-item">
+        <summary>¿Qué medios de pago aceptan?<span class="chev">+</span></summary>
+        <div class="a">Podés abonar en efectivo, transferencia bancaria o Mercado Pago al momento de retirar tu equipo ya reparado.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 10. CIERRE ============ -->
+<section class="closing">
+  <div class="container">
+    <h2>¿Listo para revivir tu PC?</h2>
+    <p>Escribinos ahora y coordinamos tu diagnóstico sin cargo en Holmberg 2859, San Miguel de Tucumán.</p>
+    <a class="btn-whatsapp" href="https://wa.me/543813399196?text=Hola!%20Estuve%20viendo%20tu%20p%C3%A1gina%20web%20y%20quiero%20coordinar%20para%20llevar%20mi%20PC%20a%20revisi%C3%B3n%20a%20Holmberg%202859.%20Mi%20equipo%20presenta%20la%20siguiente%20falla%3A" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.4.1-.2 0-.4 0-.5-.1-.1-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.7.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z"/><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.5-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+      Hablanos ahora
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="container footer-meta">
+    RTech Soluciones Informática · Holmberg 2859, San Miguel de Tucumán · <a href="mailto:rtech.solucionesinformatica@gmail.com">rtech.solucionesinformatica@gmail.com</a>
+  </div>
+  <div class="container footer-meta" style="margin-top:8px;">
+    © <span id="year"></span> RTech Soluciones Informática. Todos los derechos reservados. · Desarrollado por Juan Pablo Rodríguez
+  </div>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+<a class="float-wa" href="https://wa.me/543813399196?text=Hola!%20Estuve%20viendo%20tu%20p%C3%A1gina%20web%20y%20quiero%20coordinar%20para%20llevar%20mi%20PC%20a%20revisi%C3%B3n%20a%20Holmberg%202859.%20Mi%20equipo%20presenta%20la%20siguiente%20falla%3A" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.4.1-.2 0-.4 0-.5-.1-.1-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.7.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z"/><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.5-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+  <span class="full">Tocá acá y mandanos un WhatsApp</span>
+</a>
+
+</body>
+</html>
