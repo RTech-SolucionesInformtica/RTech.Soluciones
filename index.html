@@ -541,7 +541,8 @@
   /* ---------- Footer ---------- */
   footer{
     border-top:1px solid var(--line);
-    padding:36px 0 110px;
+    padding:40px 0 0;
+    margin-bottom:90px;
   }
 
   .footer-row{
@@ -549,17 +550,32 @@
     flex-direction:column;
     gap:18px;
     align-items:flex-start;
+    padding-bottom:28px;
   }
 
   @media(min-width:640px){
-    .footer-row{flex-direction:row;justify-content:space-between;align-items:center;}
+    .footer-row{flex-direction:row;justify-content:space-between;align-items:flex-start;}
   }
 
-  .footer-brand{font-family:var(--font-head);font-weight:700;font-size:0.95rem;}
+  .footer-brand{font-family:var(--font-head);font-weight:700;font-size:0.98rem;display:block;margin-bottom:4px;}
 
-  .footer-meta{color:var(--text-muted);font-size:0.82rem;}
+  .footer-tagline{color:var(--text-muted);font-size:0.82rem;}
+
+  .footer-meta{color:var(--text-muted);font-size:0.85rem;line-height:1.7;}
 
   .footer-meta a:hover{color:var(--cyan);}
+
+  .footer-bottom{
+    border-top:1px solid var(--line);
+    padding:16px 0;
+    color:var(--text-muted);
+    font-size:0.78rem;
+    text-align:center;
+  }
+
+  @media(min-width:640px){
+    .footer-bottom{text-align:left;}
+  }
 
   /* ---------- Floating WhatsApp ---------- */
   .float-wa{
@@ -822,11 +838,17 @@
 
 <footer>
   <div class="container footer-row">
-    <span class="footer-brand">RTech Soluciones Informática</span>
-    <span class="footer-meta">Holmberg 2859, San Miguel de Tucumán · <a href="mailto:rtech.solucionesinformatica@gmail.com">rtech.solucionesinformatica@gmail.com</a></span>
+    <div>
+      <span class="footer-brand">RTech Soluciones Informática</span>
+      <span class="footer-tagline">Servicio técnico de PC y notebooks en San Miguel de Tucumán</span>
+    </div>
+    <div class="footer-meta">
+      Holmberg 2859, San Miguel de Tucumán<br>
+      <a href="mailto:rtech.solucionesinformatica@gmail.com">rtech.solucionesinformatica@gmail.com</a>
+    </div>
   </div>
-  <div class="container">
-    <p class="footer-meta" style="margin-top:14px;">© <span id="year"></span> RTech Soluciones Informática. Todos los derechos reservados. · Desarrollado por Juan Pablo Rodríguez</p>
+  <div class="container footer-bottom">
+    © <span id="year"></span> RTech Soluciones Informática. Todos los derechos reservados. · Desarrollado por Juan Pablo Rodríguez
   </div>
 </footer>
 
