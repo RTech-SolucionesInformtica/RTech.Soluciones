@@ -294,28 +294,26 @@
     position:relative;
     border-radius:14px;
     border:1px solid var(--line);
-    background:
-      radial-gradient(circle at 30% 20%, rgba(0,210,255,0.12), transparent 55%),
-      linear-gradient(160deg, #171b1d, #0e1112);
+    overflow:hidden;
     aspect-ratio:4/3;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:24px;
   }
 
-  .hero-visual .placeholder-note{
-    text-align:center;
+  .hero-visual img{
+    width:100%;height:100%;
+    object-fit:cover;
+  }
+
+  .hero-visual .img-credit{
+    position:absolute;
+    right:10px;bottom:10px;
+    background:rgba(18,18,18,0.72);
     color:var(--text-muted);
-    font-size:0.82rem;
-    max-width:26ch;
+    font-size:0.68rem;
+    padding:4px 8px;
+    border-radius:5px;
   }
 
-  .hero-visual .placeholder-note svg{
-    width:46px;height:46px;
-    color:var(--cyan);
-    margin:0 auto 14px;
-  }
+  .hero-visual .img-credit a{color:var(--cyan);}
 
   /* ---------- Section shell ---------- */
   section{padding:60px 0;}
@@ -654,10 +652,8 @@
         </div>
       </div>
       <div class="hero-visual">
-        <div class="placeholder-note">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M8 20h8M12 16v4"/></svg>
-          Espacio para foto real del taller: gabinete o mano técnica aplicando pasta térmica en Holmberg 2859.
-        </div>
+        <img src="https://images.unsplash.com/photo-1775410631936-7de96322df0b?fm=jpg&q=80&w=1200&auto=format&fit=crop" alt="PC gamer con iluminación RGB" loading="lazy">
+        <span class="img-credit">Foto temporal · <a href="https://unsplash.com/@branden_skeli" target="_blank" rel="noopener">Branden Skeli</a> en Unsplash</span>
       </div>
     </div>
   </section>
@@ -732,7 +728,7 @@
         <div class="founder">
           <span class="founder-avatar">JP</span>
           <div>
-            <div class="founder-name">Juan Pablo</div>
+            <div class="founder-name">Juan Pablo Rodríguez</div>
             <div class="founder-role">Fundador, RTech Soluciones Informática</div>
           </div>
         </div>
@@ -782,8 +778,8 @@
               <input type="text" id="nombre" name="nombre" required>
             </div>
             <div>
-              <label for="whatsapp">Número de WhatsApp</label>
-              <input type="tel" id="whatsapp" name="whatsapp" required>
+              <label for="email">Correo electrónico</label>
+              <input type="email" id="email" name="email" required>
             </div>
             <div>
               <label for="falla">¿Qué le pasa a tu PC?</label>
@@ -843,9 +839,9 @@
   document.getElementById('contact-form').addEventListener('submit', function(e){
     e.preventDefault();
     var nombre = document.getElementById('nombre').value.trim();
-    var telefono = document.getElementById('whatsapp').value.trim();
+    var email = document.getElementById('email').value.trim();
     var falla = document.getElementById('falla').value.trim();
-    var texto = 'Hola! Soy ' + nombre + ' (WhatsApp: ' + telefono + '). Quiero coordinar para llevar mi PC a revisión a Holmberg 2859. Mi equipo presenta la siguiente falla: ' + falla;
+    var texto = 'Hola! Soy ' + nombre + ' (correo: ' + email + '). Quiero coordinar para llevar mi PC a revisión a Holmberg 2859. Mi equipo presenta la siguiente falla: ' + falla;
     var url = 'https://wa.me/543813399196?text=' + encodeURIComponent(texto);
     window.open(url, '_blank');
   });
