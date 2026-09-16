@@ -208,6 +208,44 @@
     pointer-events:none;
   }
 
+  .hero-bg path{
+    stroke-dasharray:6 10;
+    animation:hero-flow 6s linear infinite;
+  }
+
+  .hero-bg path:nth-of-type(2){animation-duration:8s;animation-direction:reverse;}
+  .hero-bg path:nth-of-type(3){animation-duration:7s;}
+  .hero-bg path:nth-of-type(4){animation-duration:9s;animation-direction:reverse;}
+
+  .hero-bg circle{
+    animation:hero-blink 3.2s ease-in-out infinite, hero-float 5s ease-in-out infinite;
+    transform-box:fill-box;
+    transform-origin:center;
+  }
+
+  .hero-bg circle:nth-of-type(1){animation-delay:0s,0s;}
+  .hero-bg circle:nth-of-type(2){animation-delay:0.6s,0.4s;}
+  .hero-bg circle:nth-of-type(3){animation-delay:1.2s,0.8s;}
+  .hero-bg circle:nth-of-type(4){animation-delay:1.8s,1.2s;}
+
+  @keyframes hero-flow{
+    to{stroke-dashoffset:-160;}
+  }
+
+  @keyframes hero-blink{
+    0%,100%{opacity:0.35;}
+    50%{opacity:1;}
+  }
+
+  @keyframes hero-float{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-8px);}
+  }
+
+  @media(prefers-reduced-motion:reduce){
+    .hero-bg path,.hero-bg circle{animation:none;}
+  }
+
   .hero-inner{
     position:relative;
     z-index:1;
@@ -817,14 +855,16 @@
         <circle cx="500" cy="220" r="4" fill="#00d2ff"/>
         <circle cx="700" cy="100" r="4" fill="#00d2ff"/>
         <circle cx="680" cy="380" r="4" fill="#00d2ff"/>
+        <circle cx="150" cy="60" r="2.5" fill="#00d2ff" opacity="0.7"/>
+        <circle cx="380" cy="30" r="2" fill="#00d2ff" opacity="0.6"/>
+        <circle cx="850" cy="200" r="2.5" fill="#00d2ff" opacity="0.7"/>
+        <circle cx="1050" cy="140" r="2" fill="#00d2ff" opacity="0.6"/>
+        <circle cx="90" cy="300" r="2" fill="#00d2ff" opacity="0.5"/>
+        <circle cx="1120" cy="350" r="2.5" fill="#00d2ff" opacity="0.6"/>
       </g>
     </svg>
     <div class="container hero-inner">
       <div>
-        <span class="eyebrow-loc">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
-          Holmberg 2859, San Miguel de Tucumán
-        </span>
         <h1 class="hero-title">Servicio Técnico de PC, Notebooks y Armado de Equipos en San Miguel de Tucumán</h1>
         <p class="hero-sub">Soluciones rápidas, transparentes y con repuestos originales. Traé tu computadora a nuestro taller de Holmberg 2859 y te damos un presupuesto 100% sin cargo.</p>
         <div class="cta-row">
