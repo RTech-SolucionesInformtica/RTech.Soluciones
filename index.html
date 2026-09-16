@@ -531,6 +531,81 @@
   .pillar h3{font-size:0.98rem;margin-bottom:4px;}
   .pillar p{color:var(--text-muted);font-size:0.88rem;}
 
+  /* ---------- Testimonios ---------- */
+  #opiniones{position:relative;overflow:hidden;}
+
+  .testi-bg{position:absolute;inset:0;z-index:0;opacity:0.5;pointer-events:none;}
+
+  #opiniones .container{position:relative;z-index:1;}
+
+  .testi-carousel{overflow:hidden;}
+
+  .testi-track{
+    display:flex;
+    transition:transform 0.4s ease;
+  }
+
+  .testi-slide{
+    flex:0 0 100%;
+    display:grid;
+    gap:20px;
+  }
+
+  @media(min-width:760px){
+    .testi-slide{grid-template-columns:1fr 1fr;}
+  }
+
+  .testi-card{
+    border:1px solid var(--line);
+    border-radius:var(--radius-card);
+    padding:26px;
+    background:var(--bg-card);
+  }
+
+  .testi-stars{color:var(--cyan);letter-spacing:2px;margin-bottom:14px;font-size:0.95rem;}
+
+  .testi-card p{color:var(--text);font-size:1rem;margin-bottom:20px;}
+
+  .testi-person{display:flex;align-items:center;gap:12px;}
+
+  .testi-avatar{
+    width:42px;height:42px;
+    border-radius:50%;
+    background:linear-gradient(150deg, var(--cyan-dim), #0e1416);
+    border:1px solid var(--cyan);
+    display:flex;align-items:center;justify-content:center;
+    font-family:var(--font-head);
+    color:var(--cyan);
+    font-weight:700;
+    font-size:0.85rem;
+    flex:none;
+  }
+
+  .testi-name{font-weight:600;font-size:0.9rem;}
+  .testi-loc{color:var(--text-muted);font-size:0.8rem;}
+
+  .testi-dots{
+    display:flex;
+    justify-content:center;
+    gap:8px;
+    margin-top:28px;
+  }
+
+  .testi-dot{
+    width:9px;height:9px;
+    border-radius:50%;
+    border:none;
+    background:var(--line);
+    cursor:pointer;
+    padding:0;
+  }
+
+  .testi-dot.active{
+    width:22px;
+    border-radius:5px;
+    background:var(--cyan);
+  }
+
   /* ---------- Contacto ---------- */
   .contact-grid{
     display:grid;
@@ -716,6 +791,7 @@
       <a href="#servicios">Servicios</a>
       <a href="#antes-despues">Antes y Después</a>
       <a href="#nosotros">Nosotros</a>
+      <a href="#opiniones">Opiniones</a>
       <a href="#faq">Preguntas frecuentes</a>
       <a href="#contacto">Contacto</a>
     </nav>
@@ -891,6 +967,91 @@
     </div>
   </section>
 
+  <!-- ============ OPINIONES ============ -->
+  <section id="opiniones">
+    <svg class="testi-bg" viewBox="0 0 1200 500" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <g stroke="#00d2ff" stroke-width="1" fill="none" opacity="0.16">
+        <path d="M0 90 H240 L280 130 H500"/>
+        <path d="M0 260 H150 L190 300 H440 L480 260 H880"/>
+        <path d="M1200 70 H930 L890 110 H690"/>
+        <path d="M1200 390 H990 L950 350 H710 L670 390 H410"/>
+        <circle cx="500" cy="130" r="4" fill="#00d2ff"/>
+        <circle cx="480" cy="260" r="4" fill="#00d2ff"/>
+        <circle cx="690" cy="110" r="4" fill="#00d2ff"/>
+        <circle cx="670" cy="390" r="4" fill="#00d2ff"/>
+      </g>
+    </svg>
+    <div class="container">
+      <div class="section-head">
+        <h2>Lo que dicen nuestros <span style="color:var(--cyan);">clientes</span></h2>
+        <p>Cientos de equipos reparados en San Miguel de Tucumán y alrededores. Esto es lo que opinan quienes ya confiaron en nosotros.</p>
+      </div>
+      <div class="testi-carousel">
+        <div class="testi-track" id="testi-track">
+
+          <div class="testi-slide">
+            <div class="testi-card">
+              <div class="testi-stars">★★★★★</div>
+              <p>Mi notebook prendía y se apagaba sola. La dejaron impecable y en un día. Precio justo y explicaron todo.</p>
+              <div class="testi-person">
+                <span class="testi-avatar">CM</span>
+                <div><div class="testi-name">Camila Medina</div><div class="testi-loc">San Miguel de Tucumán</div></div>
+              </div>
+            </div>
+            <div class="testi-card">
+              <div class="testi-stars">★★★★★</div>
+              <p>Le pusieron SSD a mi PC y quedó volando. Ahora arranca en segundos. Súper recomendados.</p>
+              <div class="testi-person">
+                <span class="testi-avatar">JR</span>
+                <div><div class="testi-name">Javier Romero</div><div class="testi-loc">Yerba Buena</div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testi-slide">
+            <div class="testi-card">
+              <div class="testi-stars">★★★★★</div>
+              <p>Me armaron el PC gamer soñado dentro de mi presupuesto. Cable management de otro nivel.</p>
+              <div class="testi-person">
+                <span class="testi-avatar">FT</span>
+                <div><div class="testi-name">Fernando Torres</div><div class="testi-loc">Banda del Río Salí</div></div>
+              </div>
+            </div>
+            <div class="testi-card">
+              <div class="testi-stars">★★★★★</div>
+              <p>Tenían el equipo lleno de virus y publicidad. Lo limpiaron completo y me dejaron protección. Cero drama.</p>
+              <div class="testi-person">
+                <span class="testi-avatar">DL</span>
+                <div><div class="testi-name">Daniela López</div><div class="testi-loc">Lules</div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testi-slide">
+            <div class="testi-card">
+              <div class="testi-stars">★★★★★</div>
+              <p>Antes de tocar mi PC me hicieron un backup completo de mis archivos. Se nota la seriedad del servicio.</p>
+              <div class="testi-person">
+                <span class="testi-avatar">MA</span>
+                <div><div class="testi-name">Marcos Aráoz</div><div class="testi-loc">Tafí Viejo</div></div>
+              </div>
+            </div>
+            <div class="testi-card">
+              <div class="testi-stars">★★★★★</div>
+              <p>Diagnóstico sin cargo, me explicaron todo con fotos y arreglaron mi placa en el mismo día. Excelente atención.</p>
+              <div class="testi-person">
+                <span class="testi-avatar">VS</span>
+                <div><div class="testi-name">Valentina Suárez</div><div class="testi-loc">Alderetes</div></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="testi-dots" id="testi-dots"></div>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ PREGUNTAS FRECUENTES ============ -->
   <section id="faq">
     <div class="container">
@@ -1017,6 +1178,37 @@
       navToggle.setAttribute('aria-expanded', 'false');
     });
   });
+
+  // Carrusel de opiniones
+  (function(){
+    var track = document.getElementById('testi-track');
+    var dotsWrap = document.getElementById('testi-dots');
+    if(!track || !dotsWrap) return;
+    var slides = track.querySelectorAll('.testi-slide');
+    var current = 0;
+
+    slides.forEach(function(_, i){
+      var dot = document.createElement('button');
+      dot.className = 'testi-dot' + (i === 0 ? ' active' : '');
+      dot.setAttribute('aria-label', 'Ir a la opinión ' + (i + 1));
+      dot.addEventListener('click', function(){ goTo(i); });
+      dotsWrap.appendChild(dot);
+    });
+
+    var dots = dotsWrap.querySelectorAll('.testi-dot');
+
+    function goTo(i){
+      current = i;
+      track.style.transform = 'translateX(-' + (i * 100) + '%)';
+      dots.forEach(function(d, di){ d.classList.toggle('active', di === i); });
+    }
+
+    var autoplay = setInterval(function(){
+      goTo((current + 1) % slides.length);
+    }, 6000);
+
+    track.addEventListener('mouseenter', function(){ clearInterval(autoplay); });
+  })();
 </script>
 
 </body>
