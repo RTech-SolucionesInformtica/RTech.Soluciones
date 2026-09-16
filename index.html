@@ -982,7 +982,7 @@
   <div class="container footer-row">
     <div>
       <span class="footer-brand">RTech Soluciones Informática</span>
-      <span class="footer-tagline">Servicio técnico de PC y notebooks en San Miguel de Tucumán</span>
+      <span class="footer-tagline">© <span id="year2"></span> RTech Soluciones Informática. Todos los derechos reservados. · Desarrollado por Juan Pablo Rodríguez</span>
     </div>
   </div>
   <div class="container footer-bottom">
@@ -1007,6 +1007,7 @@
     window.location.href = url;
   });
   document.getElementById('year').textContent = new Date().getFullYear();
+  document.getElementById('year2').textContent = new Date().getFullYear();
 
   var navToggle = document.getElementById('nav-toggle');
   var siteNav = document.getElementById('site-nav');
