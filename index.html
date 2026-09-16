@@ -10,6 +10,7 @@
 <meta property="og:type" content="website">
 <meta property="og:image" content="assets/despues-limpieza.jpg">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="icon" type="image/png" href="assets/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -147,15 +148,11 @@
   }
 
   .brand-mark{
-    width:34px;height:34px;
-    border-radius:8px;
-    background:linear-gradient(145deg, var(--cyan-dim), #0e1416);
-    border:1px solid var(--cyan);
-    display:flex;align-items:center;justify-content:center;
-    color:var(--cyan);
-    font-family:var(--font-head);
-    font-weight:800;
-    font-size:0.9rem;
+    width:40px;height:40px;
+    border-radius:50%;
+    display:block;
+    object-fit:contain;
+    flex:none;
   }
 
   .brand small{
@@ -705,7 +702,7 @@
 <header>
   <div class="container nav-row">
     <a href="#inicio" class="brand">
-      <span class="brand-mark">RT</span>
+      <img class="brand-mark" src="assets/logo.png" alt="Logo RTech Soluciones Informática">
       <span>
         RTech Soluciones Informática
         <small>San Miguel de Tucumán</small>
