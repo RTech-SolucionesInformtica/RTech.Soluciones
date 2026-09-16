@@ -8,6 +8,8 @@
 <meta property="og:title" content="RTech Soluciones Informática — Servicio Técnico de PC en San Miguel de Tucumán">
 <meta property="og:description" content="Reparación, armado a medida y upgrades de PC con diagnóstico 100% sin cargo. Holmberg 2859, San Miguel de Tucumán.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="assets/despues-limpieza.jpg">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -16,7 +18,7 @@
   "@context": "https://schema.org",
   "@type": "ComputerRepair",
   "name": "RTech Soluciones Informática",
-  "image": "",
+  "image": "assets/despues-limpieza.jpg",
   "telephone": "+543813399196",
   "email": "rtech.solucionesinformatica@gmail.com",
   "address": {
@@ -111,11 +113,28 @@
   }
 
   .nav-row{
+    position:relative;
     display:flex;
     align-items:center;
     justify-content:space-between;
     padding:14px 0;
   }
+
+  .nav-toggle{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:38px;height:38px;
+    border:1px solid var(--line);
+    border-radius:8px;
+    background:transparent;
+    color:var(--text);
+    cursor:pointer;
+  }
+
+  .nav-toggle svg{width:20px;height:20px;}
+
+  @media(min-width:840px){.nav-toggle{display:none;}}
 
   .brand{
     display:flex;
@@ -158,6 +177,22 @@
 
   @media(min-width:840px){
     nav.links{display:flex;}
+  }
+
+  @media(max-width:839px){
+    nav.links.open{
+      display:flex;
+      flex-direction:column;
+      gap:0;
+      position:absolute;
+      top:100%;
+      left:0;right:0;
+      background:var(--bg);
+      border-bottom:1px solid var(--line);
+      padding:6px 0;
+    }
+    nav.links.open a{padding:14px 20px;border-top:1px solid var(--line);}
+    nav.links.open a:first-child{border-top:none;}
   }
 
   /* ---------- Hero ---------- */
@@ -654,7 +689,10 @@
         <small>San Miguel de Tucumán</small>
       </span>
     </a>
-    <nav class="links">
+    <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="site-nav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <nav class="links" id="site-nav">
       <a href="#inicio">Inicio</a>
       <a href="#servicios">Servicios</a>
       <a href="#antes-despues">Antes y Después</a>
@@ -703,8 +741,7 @@
         </div>
       </div>
       <div class="hero-visual">
-        <img src="https://images.unsplash.com/photo-1775410631936-7de96322df0b?fm=jpg&q=80&w=1200&auto=format&fit=crop" alt="PC gamer con iluminación RGB" loading="lazy">
-        <span class="img-credit">Foto temporal · <a href="https://unsplash.com/@branden_skeli" target="_blank" rel="noopener">Branden Skeli</a> en Unsplash</span>
+        <img src="assets/despues-limpieza.jpg" alt="PC gamer con iluminación RGB, limpia tras mantenimiento en nuestro taller" loading="lazy">
       </div>
     </div>
   </section>
@@ -925,6 +962,19 @@
     window.open(url, '_blank');
   });
   document.getElementById('year').textContent = new Date().getFullYear();
+
+  var navToggle = document.getElementById('nav-toggle');
+  var siteNav = document.getElementById('site-nav');
+  navToggle.addEventListener('click', function(){
+    var isOpen = siteNav.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', String(isOpen));
+  });
+  siteNav.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      siteNav.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
 </script>
 
 </body>
