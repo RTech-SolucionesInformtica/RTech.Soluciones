@@ -748,25 +748,42 @@
   /* ---------- Footer ---------- */
   footer{
     border-top:1px solid var(--line);
-    padding:40px 0 0;
+    padding:44px 0 0;
     margin-bottom:90px;
+    background:var(--bg-raised);
   }
 
   .footer-row{
-    display:flex;
-    flex-direction:column;
-    gap:18px;
-    align-items:flex-start;
-    padding-bottom:28px;
+    display:grid;
+    gap:32px;
+    padding-bottom:32px;
   }
 
   @media(min-width:640px){
-    .footer-row{flex-direction:row;justify-content:space-between;align-items:flex-start;}
+    .footer-row{grid-template-columns:1.3fr 1fr 1fr;}
   }
 
-  .footer-brand{font-family:var(--font-head);font-weight:700;font-size:0.98rem;display:block;margin-bottom:4px;}
+  .footer-brand{font-family:var(--font-head);font-weight:700;font-size:1rem;display:block;margin-bottom:8px;}
 
-  .footer-tagline{color:var(--text-muted);font-size:0.82rem;}
+  .footer-tagline{color:var(--text-muted);font-size:0.85rem;line-height:1.6;max-width:32ch;}
+
+  .footer-col h5{
+    font-family:var(--font-head);
+    font-size:0.82rem;
+    font-weight:600;
+    letter-spacing:0.4px;
+    text-transform:uppercase;
+    color:var(--text-muted);
+    margin-bottom:12px;
+  }
+
+  .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:9px;}
+
+  .footer-col a{color:var(--text);font-size:0.88rem;}
+
+  .footer-col a:hover{color:var(--cyan);}
+
+  .footer-col p{color:var(--text-muted);font-size:0.88rem;line-height:1.6;}
 
   .footer-meta{color:var(--text-muted);font-size:0.85rem;line-height:1.7;}
 
@@ -778,10 +795,17 @@
     color:var(--text-muted);
     font-size:0.78rem;
     text-align:center;
+    display:flex;
+    flex-direction:column;
+    gap:6px;
   }
 
   @media(min-width:640px){
-    .footer-bottom{text-align:left;}
+    .footer-bottom{
+      flex-direction:row;
+      justify-content:space-between;
+      text-align:left;
+    }
   }
 
   /* ---------- Floating WhatsApp ---------- */
@@ -1261,8 +1285,32 @@
   <div class="container footer-row">
     <div>
       <span class="footer-brand">RTech Soluciones Informática</span>
-      <span class="footer-tagline">© <span id="year"></span> RTech Soluciones Informática. Todos los derechos reservados. · Desarrollado por Juan Pablo Rodríguez</span>
+      <p class="footer-tagline">Servicio técnico de PC, notebooks y armado de equipos a medida en San Miguel de Tucumán. Diagnóstico transparente y trabajo con garantía.</p>
     </div>
+    <div class="footer-col">
+      <h5>Enlaces rápidos</h5>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#antes-despues">Antes y Después</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#opiniones">Opiniones</a></li>
+        <li><a href="#faq">Preguntas frecuentes</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contacto</h5>
+      <ul>
+        <li><p>Holmberg 2859, San Miguel de Tucumán</p></li>
+        <li><a href="https://wa.me/543813399196" target="_blank" rel="noopener">WhatsApp: +54 381 339-9196</a></li>
+        <li><a href="mailto:rtech.solucionesinformatica@gmail.com">rtech.solucionesinformatica@gmail.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© <span id="year"></span> RTech Soluciones Informática. Todos los derechos reservados.</span>
+    <span>Desarrollado por Juan Pablo Rodríguez</span>
   </div>
 </footer>
 
