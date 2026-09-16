@@ -754,6 +754,7 @@
     background:#00D2FF;
     box-shadow:0 0 0 3px rgba(0,210,255,0.15);
     position:relative;
+    pointer-events:none;
   }
 
   .float-wa-status::after{
@@ -780,7 +781,10 @@
     background:var(--whatsapp);
     color:#fff;
     box-shadow:0 10px 30px rgba(0,0,0,0.45);
+    cursor:pointer;
   }
+
+  .float-wa-wrap{cursor:default;}
 
   .float-wa svg{width:28px;height:28px;flex:none;}
 
