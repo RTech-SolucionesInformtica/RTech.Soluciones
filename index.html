@@ -118,14 +118,14 @@
     display:flex;
     align-items:center;
     justify-content:space-between;
-    padding:14px 0;
+    padding:9px 0;
   }
 
   .nav-toggle{
     display:inline-flex;
     align-items:center;
     justify-content:center;
-    width:38px;height:38px;
+    width:34px;height:34px;
     border:1px solid var(--line);
     border-radius:8px;
     background:transparent;
@@ -133,22 +133,22 @@
     cursor:pointer;
   }
 
-  .nav-toggle svg{width:20px;height:20px;}
+  .nav-toggle svg{width:18px;height:18px;}
 
   @media(min-width:840px){.nav-toggle{display:none;}}
 
   .brand{
     display:flex;
     align-items:center;
-    gap:10px;
+    gap:9px;
     font-family:var(--font-head);
-    font-weight:700;
-    font-size:1.05rem;
+    font-weight:600;
+    font-size:0.92rem;
     letter-spacing:0.2px;
   }
 
   .brand-mark{
-    width:40px;height:40px;
+    width:32px;height:32px;
     border-radius:50%;
     display:block;
     object-fit:contain;
@@ -159,15 +159,16 @@
     display:block;
     font-family:var(--font-body);
     font-weight:400;
-    font-size:0.68rem;
+    font-size:0.62rem;
     color:var(--text-muted);
   }
 
   nav.links{
     display:none;
-    gap:28px;
-    font-size:0.94rem;
+    gap:22px;
+    font-size:0.85rem;
     color:var(--text-muted);
+    letter-spacing:0.15px;
   }
 
   nav.links a:hover{color:var(--cyan);}
@@ -786,6 +787,7 @@
   }
 
   .float-wa{
+    position:relative;
     display:inline-flex;
     align-items:center;
     justify-content:center;
@@ -798,11 +800,72 @@
     cursor:pointer;
   }
 
+  .float-wa::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    border-radius:50%;
+    background:var(--whatsapp);
+    animation:wa-ring 2.2s ease-out infinite;
+    z-index:-1;
+  }
+
+  .float-wa:hover{
+    transform:scale(1.08);
+    box-shadow:0 12px 34px rgba(0,0,0,0.55);
+  }
+
+  @keyframes wa-ring{
+    0%{transform:scale(1);opacity:0.55;}
+    100%{transform:scale(1.7);opacity:0;}
+  }
+
+  .float-wa-bubble{
+    position:absolute;
+    right:calc(100% + 14px);
+    top:50%;
+    transform:translateY(-50%) translateX(6px);
+    background:#fff;
+    color:#121212;
+    font-size:0.85rem;
+    font-weight:500;
+    white-space:nowrap;
+    padding:9px 14px;
+    border-radius:10px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.35);
+    opacity:0;
+    pointer-events:none;
+    transition:opacity 0.2s ease, transform 0.2s ease;
+  }
+
+  .float-wa-bubble::after{
+    content:"";
+    position:absolute;
+    left:100%;
+    top:50%;
+    transform:translateY(-50%);
+    border:6px solid transparent;
+    border-left-color:#fff;
+  }
+
+  .float-wa:hover .float-wa-bubble{
+    opacity:1;
+    transform:translateY(-50%) translateX(0);
+  }
+
   .float-wa-wrap{cursor:default;}
 
   .float-wa svg{width:28px;height:28px;flex:none;}
 
   .float-wa span.full{display:none;}
+
+  @media(max-width:480px){
+    .float-wa-bubble{display:none;}
+  }
+
+  @media(prefers-reduced-motion:reduce){
+    .float-wa::before{animation:none;}
+  }
 
   @media(prefers-reduced-motion:no-preference){
     .btn-whatsapp,.float-wa{transition:transform 0.15s ease, background 0.15s ease;}
@@ -1191,6 +1254,7 @@
 
 <div class="float-wa-wrap">
   <a class="float-wa" href="https://wa.me/543813399196?text=Hola!%20Estuve%20viendo%20tu%20p%C3%A1gina%20web%20y%20quiero%20coordinar%20para%20llevar%20mi%20PC%20a%20revisi%C3%B3n%20a%20Holmberg%202859.%20Mi%20equipo%20presenta%20la%20siguiente%20falla%3A" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+  <span class="float-wa-bubble">¿Necesitás ayuda? Escribinos</span>
     <svg viewBox="0 0 24 24" fill="currentColor"><use href="#icon-whatsapp"/></svg>
   </a>
 </div>
