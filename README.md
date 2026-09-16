@@ -4,10 +4,11 @@ Sitio web estático (HTML, CSS y JS en un solo archivo, sin frameworks ni build)
 
 ## Archivos
 
-- `index.html` — Landing principal one-page: Inicio, Servicios, Nosotros y Contacto (formulario + mapa + horarios).
+- `index.html` — Landing principal one-page: Inicio, Servicios, Antes y Después, Nosotros, Preguntas frecuentes y Contacto (formulario + mapa + horarios).
 - `diagnostico-sin-cargo.html` — Sub-página de campaña (embudo largo): hero, prueba social, beneficios, características, cómo funciona, testimonios, oferta, garantía, FAQ y cierre. Pensada para compartir en anuncios o WhatsApp.
+- `assets/antes-limpieza.jpg` y `assets/despues-limpieza.jpg` — fotos reales del taller usadas en la sección "Antes y Después" de `index.html`.
 
-Ambas comparten paleta de marca (fondo `#121212`, cyan `#00D2FF`, verde WhatsApp `#25D366`), tipografías Poppins/Inter, y un botón flotante de WhatsApp.
+Ambas páginas comparten paleta de marca (fondo `#121212`, cyan `#00D2FF`, verde WhatsApp `#25D366`), tipografías Poppins/Inter, y un botón flotante de WhatsApp.
 
 ## Publicar con GitHub Pages
 
@@ -17,7 +18,6 @@ Ambas comparten paleta de marca (fondo `#121212`, cyan `#00D2FF`, verde WhatsApp
 
 ## Pendiente de completar
 
-- Reemplazar los placeholders de imagen por fotos reales del taller (gabinete, pasta térmica, antes/después).
 - Reemplazar los testimonios de ejemplo por reseñas reales de clientes.
 - Si tenés el pin exacto de Google Maps del local, actualizar el `src` del `iframe` del mapa en `index.html`.
 

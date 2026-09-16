@@ -452,6 +452,18 @@
     border-top:1px solid var(--line);
   }
 
+  /* ---------- FAQ ---------- */
+  .faq-list{max-width:720px;margin:0 auto;display:flex;flex-direction:column;gap:10px;}
+  .faq-item{border:1px solid var(--line);border-radius:9px;background:var(--bg-card);overflow:hidden;}
+  .faq-item summary{
+    cursor:pointer;list-style:none;padding:16px 20px;font-weight:600;font-size:0.94rem;
+    display:flex;justify-content:space-between;align-items:center;gap:12px;
+  }
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-item summary .chev{color:var(--cyan);flex:none;transition:transform 0.15s ease;}
+  .faq-item[open] summary .chev{transform:rotate(45deg);}
+  .faq-item .a{padding:0 20px 18px;color:var(--text-muted);font-size:0.9rem;}
+
   /* ---------- Nosotros ---------- */
   .about-grid{
     display:grid;
@@ -703,6 +715,7 @@
       <a href="#servicios">Servicios</a>
       <a href="#antes-despues">Antes y Después</a>
       <a href="#nosotros">Nosotros</a>
+      <a href="#faq">Preguntas frecuentes</a>
       <a href="#contacto">Contacto</a>
     </nav>
   </div>
@@ -873,6 +886,37 @@
             <div><h3>Velocidad y componentes originales</h3><p>Mantenimientos básicos entregados en 24/48 horas hábiles, con repuestos y licencias originales.</p></div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PREGUNTAS FRECUENTES ============ -->
+  <section id="faq">
+    <div class="container">
+      <div class="section-head">
+        <h2>Preguntas frecuentes</h2>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>¿Tengo que pagar algo si al final decido no arreglar la PC?<span class="chev">+</span></summary>
+          <div class="a">No, para nada. El diagnóstico en Holmberg 2859 es completamente gratis. Te damos el presupuesto y vos elegís si lo hacés o no.</div>
+        </details>
+        <details class="faq-item">
+          <summary>¿Qué pasa con mis fotos y archivos de trabajo, se pierden al formatear?<span class="chev">+</span></summary>
+          <div class="a">Tus datos están seguros. Hacemos un resguardo completo (backup) de toda tu información antes de tocar cualquier software o sistema operativo.</div>
+        </details>
+        <details class="faq-item">
+          <summary>¿Tengo que comprar yo los discos SSD o repuestos?<span class="chev">+</span></summary>
+          <div class="a">Como te sea más cómodo. Podemos cotizarte los componentes nosotros con proveedores de confianza, o podés traerlos vos y solo te cobramos la mano de obra del armado o actualización.</div>
+        </details>
+        <details class="faq-item">
+          <summary>¿Cuánto tiempo demoran en reparar mi PC?<span class="chev">+</span></summary>
+          <div class="a">Los mantenimientos preventivos y optimizaciones básicas se entregan en 24 a 48 horas hábiles. Si la falla requiere cambiar un repuesto complejo, te avisamos el tiempo estimado en el presupuesto.</div>
+        </details>
+        <details class="faq-item">
+          <summary>¿Qué medios de pago aceptan?<span class="chev">+</span></summary>
+          <div class="a">Podés abonar en efectivo, transferencia bancaria o Mercado Pago al momento de retirar tu equipo ya reparado.</div>
+        </details>
       </div>
     </div>
   </section>
