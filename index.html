@@ -573,8 +573,8 @@
     align-items:center;
     justify-content:center;
     gap:9px;
-    background:var(--whatsapp);
-    color:#062b13;
+    background:var(--cyan);
+    color:#062b3a;
     font-weight:600;
     font-size:0.95rem;
     padding:13px 18px;
@@ -583,7 +583,7 @@
     cursor:pointer;
   }
 
-  .form-submit:hover{background:var(--whatsapp-dark);color:#fff;}
+  .form-submit:hover{background:#33dbff;color:#04202e;}
 
   .form-note{font-size:0.76rem;color:var(--text-muted);margin-top:2px;}
 
@@ -947,10 +947,10 @@
               <textarea id="falla" name="falla" placeholder="Breve descripción de la falla" required></textarea>
             </div>
             <button type="submit" class="form-submit">
-              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><use href="#icon-whatsapp"/></svg>
-              Enviar por WhatsApp
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="18" height="18"><path d="M4 5h16v14H4z"/><path d="M4 6l8 7 8-7"/></svg>
+              Enviar por correo
             </button>
-            <p class="form-note">Al enviar, se abre WhatsApp con tu mensaje ya redactado para confirmar el envío.</p>
+            <p class="form-note">Al enviar, se abre tu programa de correo con el mensaje ya redactado para confirmar el envío.</p>
             <p class="form-note">También podés escribirnos directamente a <a href="mailto:rtech.solucionesinformatica@gmail.com" style="color:var(--cyan);">rtech.solucionesinformatica@gmail.com</a>.</p>
           </form>
         </div>
@@ -1001,9 +1001,10 @@
     var nombre = document.getElementById('nombre').value.trim();
     var email = document.getElementById('email').value.trim();
     var falla = document.getElementById('falla').value.trim();
-    var texto = 'Hola! Soy ' + nombre + ' (correo: ' + email + '). Quiero coordinar para llevar mi PC a revisión a Holmberg 2859. Mi equipo presenta la siguiente falla: ' + falla;
-    var url = 'https://wa.me/543813399196?text=' + encodeURIComponent(texto);
-    window.open(url, '_blank');
+    var asunto = 'Consulta desde la web - ' + nombre;
+    var cuerpo = 'Hola! Soy ' + nombre + ' (correo: ' + email + '). Quiero coordinar para llevar mi PC a revisión a Holmberg 2859. Mi equipo presenta la siguiente falla: ' + falla;
+    var url = 'mailto:rtech.solucionesinformatica@gmail.com?subject=' + encodeURIComponent(asunto) + '&body=' + encodeURIComponent(cuerpo);
+    window.location.href = url;
   });
   document.getElementById('year').textContent = new Date().getFullYear();
 
