@@ -747,30 +747,6 @@
     gap:10px;
   }
 
-  .float-wa-status{
-    width:14px;
-    height:14px;
-    border-radius:50%;
-    background:#00D2FF;
-    box-shadow:0 0 0 3px rgba(0,210,255,0.15);
-    position:relative;
-    pointer-events:none;
-  }
-
-  .float-wa-status::after{
-    content:"";
-    position:absolute;
-    inset:-6px;
-    border-radius:50%;
-    border:2px solid #00D2FF;
-    animation:wa-pulse 1.8s ease-out infinite;
-  }
-
-  @keyframes wa-pulse{
-    0%{transform:scale(0.6);opacity:0.9;}
-    100%{transform:scale(1.8);opacity:0;}
-  }
-
   .float-wa{
     display:inline-flex;
     align-items:center;
@@ -789,10 +765,6 @@
   .float-wa svg{width:28px;height:28px;flex:none;}
 
   .float-wa span.full{display:none;}
-
-  @media(prefers-reduced-motion:reduce){
-    .float-wa-status::after{animation:none;}
-  }
 
   @media(prefers-reduced-motion:no-preference){
     .btn-whatsapp,.float-wa{transition:transform 0.15s ease, background 0.15s ease;}
@@ -1178,7 +1150,6 @@
 </footer>
 
 <div class="float-wa-wrap">
-  <span class="float-wa-status" aria-hidden="true"></span>
   <a class="float-wa" href="https://wa.me/543813399196?text=Hola!%20Estuve%20viendo%20tu%20p%C3%A1gina%20web%20y%20quiero%20coordinar%20para%20llevar%20mi%20PC%20a%20revisi%C3%B3n%20a%20Holmberg%202859.%20Mi%20equipo%20presenta%20la%20siguiente%20falla%3A" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
     <svg viewBox="0 0 24 24" fill="currentColor"><use href="#icon-whatsapp"/></svg>
   </a>
