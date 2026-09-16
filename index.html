@@ -736,29 +736,58 @@
   }
 
   /* ---------- Floating WhatsApp ---------- */
-  .float-wa{
+  .float-wa-wrap{
     position:fixed;
     right:18px;
     bottom:18px;
     z-index:50;
-    display:inline-flex;
+    display:flex;
+    flex-direction:column;
     align-items:center;
     gap:10px;
+  }
+
+  .float-wa-status{
+    width:14px;
+    height:14px;
+    border-radius:50%;
+    background:#00D2FF;
+    box-shadow:0 0 0 3px rgba(0,210,255,0.15);
+    position:relative;
+  }
+
+  .float-wa-status::after{
+    content:"";
+    position:absolute;
+    inset:-6px;
+    border-radius:50%;
+    border:2px solid #00D2FF;
+    animation:wa-pulse 1.8s ease-out infinite;
+  }
+
+  @keyframes wa-pulse{
+    0%{transform:scale(0.6);opacity:0.9;}
+    100%{transform:scale(1.8);opacity:0;}
+  }
+
+  .float-wa{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:56px;
+    height:56px;
+    border-radius:50%;
     background:var(--whatsapp);
-    color:#062b13;
-    font-weight:600;
-    font-size:0.86rem;
-    padding:13px 18px;
-    border-radius:50px;
+    color:#fff;
     box-shadow:0 10px 30px rgba(0,0,0,0.45);
   }
 
-  .float-wa svg{width:20px;height:20px;flex:none;}
+  .float-wa svg{width:28px;height:28px;flex:none;}
 
   .float-wa span.full{display:none;}
 
-  @media(min-width:560px){
-    .float-wa span.full{display:inline;}
+  @media(prefers-reduced-motion:reduce){
+    .float-wa-status::after{animation:none;}
   }
 
   @media(prefers-reduced-motion:no-preference){
@@ -1144,10 +1173,12 @@
   </div>
 </footer>
 
-<a class="float-wa" href="https://wa.me/543813399196?text=Hola!%20Estuve%20viendo%20tu%20p%C3%A1gina%20web%20y%20quiero%20coordinar%20para%20llevar%20mi%20PC%20a%20revisi%C3%B3n%20a%20Holmberg%202859.%20Mi%20equipo%20presenta%20la%20siguiente%20falla%3A" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
-  <svg viewBox="0 0 24 24" fill="currentColor"><use href="#icon-whatsapp"/></svg>
-  <span class="full">Tocá acá y mandanos un WhatsApp</span>
-</a>
+<div class="float-wa-wrap">
+  <span class="float-wa-status" aria-hidden="true"></span>
+  <a class="float-wa" href="https://wa.me/543813399196?text=Hola!%20Estuve%20viendo%20tu%20p%C3%A1gina%20web%20y%20quiero%20coordinar%20para%20llevar%20mi%20PC%20a%20revisi%C3%B3n%20a%20Holmberg%202859.%20Mi%20equipo%20presenta%20la%20siguiente%20falla%3A" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><use href="#icon-whatsapp"/></svg>
+  </a>
+</div>
 
 <script>
   document.getElementById('contact-form').addEventListener('submit', function(e){
