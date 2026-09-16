@@ -368,6 +368,55 @@
 
   .service-meta strong{color:var(--cyan);font-weight:600;}
 
+  /* ---------- Antes y Después ---------- */
+  .before-after{
+    display:grid;
+    gap:16px;
+    grid-template-columns:1fr;
+    max-width:820px;
+  }
+
+  @media(min-width:640px){
+    .before-after{grid-template-columns:1fr 1fr;}
+  }
+
+  .ba-card{
+    position:relative;
+    border:1px solid var(--line);
+    border-radius:var(--radius-card);
+    overflow:hidden;
+    background:var(--bg-card);
+  }
+
+  .ba-card img{
+    width:100%;
+    aspect-ratio:3/4;
+    object-fit:cover;
+  }
+
+  .ba-tag{
+    position:absolute;
+    top:12px;
+    left:12px;
+    padding:5px 12px;
+    border-radius:20px;
+    font-family:var(--font-head);
+    font-weight:700;
+    font-size:0.75rem;
+    letter-spacing:0.3px;
+    text-transform:uppercase;
+  }
+
+  .ba-tag.antes{background:rgba(18,18,18,0.85);color:#ff8a65;border:1px solid #ff8a65;}
+  .ba-tag.despues{background:rgba(18,18,18,0.85);color:var(--cyan);border:1px solid var(--cyan);}
+
+  .ba-caption{
+    padding:12px 16px;
+    font-size:0.85rem;
+    color:var(--text-muted);
+    border-top:1px solid var(--line);
+  }
+
   /* ---------- Nosotros ---------- */
   .about-grid{
     display:grid;
@@ -608,6 +657,7 @@
     <nav class="links">
       <a href="#inicio">Inicio</a>
       <a href="#servicios">Servicios</a>
+      <a href="#antes-despues">Antes y Después</a>
       <a href="#nosotros">Nosotros</a>
       <a href="#contacto">Contacto</a>
     </nav>
@@ -718,6 +768,28 @@
           </div>
         </article>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ANTES Y DESPUÉS ============ -->
+  <section id="antes-despues">
+    <div class="container">
+      <div class="section-head">
+        <h2>Antes y Después</h2>
+        <p>Así dejamos los equipos que pasan por nuestro taller: limpieza interna profunda, cambio de pasta térmica y prolijidad en el cableado.</p>
+      </div>
+      <div class="before-after">
+        <figure class="ba-card">
+          <span class="ba-tag antes">Antes</span>
+          <img src="assets/antes-limpieza.jpg" alt="Interior de gabinete con acumulación de polvo antes del mantenimiento" loading="lazy">
+          <figcaption class="ba-caption">Polvo acumulado en cooler, disipador y placas — motivo típico de recalentamiento y ruido.</figcaption>
+        </figure>
+        <figure class="ba-card">
+          <span class="ba-tag despues">Después</span>
+          <img src="assets/despues-limpieza.jpg" alt="Interior de gabinete limpio y ordenado después del mantenimiento" loading="lazy">
+          <figcaption class="ba-caption">Mismo equipo tras limpieza completa: mejor flujo de aire y temperaturas más bajas.</figcaption>
+        </figure>
       </div>
     </div>
   </section>
